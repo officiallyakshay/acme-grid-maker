@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			margin: 10;
+		}
+
+		#form {
+			text-align: center;
+		}
+		#message {
+			width: 100%;
+		}
+	</style>
+
+	<!-- <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="script.js"> -->
+	<title>Acme Grid Maker</title>
+</head>
+<body>
+
+	<form id="form">
+		<h1>Acme Grid Maker</h1>
+		<div id="column">
+			<input name="column" />
+		</div>
+		<div id="row">
+			<input name="row" />
+		</div>
+		<div id="message">
+			<button id="makeGridButton">Make Grid</button>
+		</div>
+	</form>
+
+	<script>
+	
+	const gridForm = document.querySelector('#form');
+	const rowForm = document.querySelector('#row');
+	const makeGrid = document.querySelector('#makeGridButton')
+
+	gridForm.addEventListener('submit', (ev) => {
+		console.log(ev)
+		ev.preventDefault();
+		if (typeof event !== 'number') {
+			event.target.innerHTML = 'Choose a number from 1 to 50'
+		}
+	});
+
+	// columnForm.addEventListener('submit', (ev) => {
+	// 	console.log(ev)
+	// 	ev.preventDefault();
+	// 	if (typeof event !== 'number') {
+	// 		event.target.innerHTML = 'Columns must be between 1 to 50';
+	// 	}
+	// });
+
+	// rowForm.addEventListener('submit', (ev) => {
+	// 	console.log(ev)
+	// 	ev.preventDefault();
+	// 	if (typeof event !== 'number') {
+	// 		event.target.innerHTML = 'Rows must be between 1 to 50';
+	// 	}
+	// });
+
+	// const render = () => {
+
+	// }
+	</script>
+
+</body>
+</html>
