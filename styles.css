@@ -1,11 +1,12 @@
 body {
+	font-family: verdana;
 	margin: 0;
 }
 #form {
 	text-align: center;
 }
-#message {
-	width: 100%;
+.input {
+	width: 17rem;
 }
 .row {
 	display: flex;
@@ -25,4 +26,7 @@ body {
 }
 #rowError, #columnError {
 	color: red;
+}
+#makeGridButton {
+	width: 17.5rem;
 }

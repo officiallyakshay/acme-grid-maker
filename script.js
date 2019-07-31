@@ -19,9 +19,9 @@ gridForm.addEventListener('submit', (ev) => {
 
 gridForm.addEventListener('keyup', (ev) => {
 	ev.preventDefault();
-	console.log(ev.target)
 	const row = +ev.target.value
 	const column = +ev.target.value
+	console.log(ev)
 	if (!row || row < 1 || row > 50 && ev.target.name === 'row') {
 		rowError.innerHTML = 'rows must be between 1 and 50';
 	} else {
@@ -29,7 +29,8 @@ gridForm.addEventListener('keyup', (ev) => {
 	}
 	if (!column || column < 1 || column > 50 && ev.target.name === 'column') {
 		columnError.innerHTML = 'columns must be between 1 and 50';
-	} else {
+	}
+	else {
 		columnError.innerHTML = '';
 	}
 	render();	
