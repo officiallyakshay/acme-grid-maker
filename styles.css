@@ -1,8 +1,19 @@
-#form {
-	text-align: center;
-
+body {
+	margin: 10;
 }
 
+#form {
+	text-align: center;
+}
 #message {
+	width: 100%;
+}
+.row {
+	display: flex;
+	justify-content: space-around;
+}
+.cell {
+	border: solid 1px black;
+	height: 100px;
 	width: 100%;
 }
