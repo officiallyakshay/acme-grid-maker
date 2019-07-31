@@ -14,6 +14,9 @@ body {
 }
 .cell {
 	border: solid 1px black;
-	height: 100px;
+	height: 60px;
 	width: 100%;
+}
+.highlight {
+	background-color: dodgerBlue;
 }
