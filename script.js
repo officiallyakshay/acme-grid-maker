@@ -17,21 +17,30 @@ gridForm.addEventListener('submit', (ev) => {
 	render();
 });
 
-gridForm.addEventListener('keyup', (ev) => {
+row.addEventListener('keyup', (ev) => {
 	ev.preventDefault();
 	const row = +ev.target.value
-	const column = +ev.target.value
 	console.log(ev)
 	if (!row || row < 1 || row > 50 && ev.target.name === 'row') {
 		rowError.innerHTML = 'rows must be between 1 and 50';
+		makeGrid.setAttribute('disabled', 'disabled');
 	} else {
 		rowError.innerHTML = '';
+		makeGrid.removeAttribute('disabled')
 	}
+	render();	
+});
+
+column.addEventListener('keyup', (ev) => {
+	ev.preventDefault();
+	const column = +ev.target.value
 	if (!column || column < 1 || column > 50 && ev.target.name === 'column') {
 		columnError.innerHTML = 'columns must be between 1 and 50';
+		makeGrid.setAttribute('disabled', 'disabled');
 	}
 	else {
 		columnError.innerHTML = '';
+		makeGrid.removeAttribute('disabled')
 	}
 	render();	
 });
